@@ -29,7 +29,7 @@ prefix_x64=$(nativeprefix "x86_64")
 prefix_x86=$(nativeprefix "x86")
 
 PREFIX=$BUILD/prefix/armv7l PREFIX64=$prefix64 PREFIX_X64=$prefix_x64 PREFIX_X86=$prefix_x86 \
-ndk-build -C app/src/main -j$cores
+/Users/josh/Projects/Emby/emby-android-dev/jni/deps/android-ndk-r21b/ndk-build -C app/src/main -j$cores
 ./gradlew assembleDebug assembleRelease
 
 if [ -n "${ANDROID_SIGNING_KEY:-}" ]; then
